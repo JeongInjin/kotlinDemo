@@ -56,8 +56,6 @@ class MemberCustomRepositoryImpl(
             .select(member)
             .from(member)
             .leftJoin(member.team, team)
-            .fetchJoin()
-//            .distinct()
             .where(
                 usernameEq(condition.username),
                 teamNameEq(condition.teamName),
